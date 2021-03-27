@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <form action="insert.php" method="post">
-        <p>目標金額：<input type="number" name="mok"></p>
-        <p>収入：<input type="number" name="shu"></p>
-        <p>生活費：<input type="number" name="life"></p>
-        <p>交際費：<input type="number" name="enj"></p>
+        <p>目標金額：<input type="number" name="mok" min="1">万円</p>
+        <p>収入：<input type="number" name="shu" min="0">万円</p>
+        <p>生活費：<input type="number" name="life" min="0">万円</p>
+        <p>交際費：<input type="number" name="enj" min="0">万円</p>
         <p>貯金割合：<input type="number" name="par" min="1" max="100">％</p>
         <p><input type="submit" value="計算"></p>
     </form>
