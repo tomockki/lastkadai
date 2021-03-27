@@ -10,7 +10,7 @@
 <body>
     <form action="insert.php" method="post">
         <p>目標金額：<input type="number" name="mok"></p>
-        <p>収入：<input type="number" name="in"></p>
+        <p>収入：<input type="number" name="shu"></p>
         <p>生活費：<input type="number" name="life"></p>
         <p>交際費：<input type="number" name="enj"></p>
         <p>貯金割合：<input type="number" name="par" min="1" max="100">％</p>
