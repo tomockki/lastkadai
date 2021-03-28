@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>貯金シミュレーター</title>
 </head>
 
 <body>
+<h1>貯金シミュレーターα</h1>
     <form action="insert.php" method="post">
         <p>目標金額：<input type="number" name="mok" min="1">万円</p>
         <p>収入：<input type="number" name="shu" min="0">万円</p>
