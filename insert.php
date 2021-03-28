@@ -1,5 +1,17 @@
 <?php
 
+if(
+    !isset($_POST["mok"]) || $_POST["mok"] == "" ||
+    !isset($_POST["shu"]) || $_POST["shu"] == "" ||
+    !isset($_POST["life"]) || $_POST["life"] == "" ||
+    !isset($_POST["enj"]) || $_POST["enj"] == "" ||
+    !isset($_POST["par"]) || $_POST["par"] == ""
+){
+    echo "<p>"."未入力の箇所があります。"."</p>";
+    echo "<p><a href = index.php>登録画面へ</a></p>";
+    exit;
+}
+
 $mok = $_POST["mok"];
 $shu = $_POST["shu"];
 $life = $_POST["life"];
