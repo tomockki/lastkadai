@@ -16,7 +16,11 @@ if($status==false){
     exit("ErrorQuery:".$error[2]);
 }else{
     while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
-        $view .= "<p>"."目標金額：".$result["mok"]."万円"."<br>"."収入：".$result["shu"]."万円"."<br>"."生活費：".$result["life"]."万円"."<br>"."交際費：".$result["enj"]."万円"."<br>"."毎月の貯金額：".$result["cho"]."万円"."<br>"."目標までの期間："."約".$result["kekka"]."ヶ月"."</p>";
+        $view .= "<p>";
+        $view .= '<a href="view.php?id='.$result["id"].'">';
+        $view .="目標金額：".$result["mok"]."万円"."<br>"."収入：".$result["shu"]."万円"."<br>"."生活費：".$result["life"]."万円"."<br>"."交際費：".$result["enj"]."万円"."<br>"."毎月の貯金額："."約".$result["cho"]."万円"."<br>"."目標までの期間："."約".$result["kekka"]."ヶ月";
+        $view .="</a>";
+        $view .="</p>";
     }
 }
 

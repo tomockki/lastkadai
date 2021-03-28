@@ -1,5 +1,5 @@
 <?php
-
+$id = $_POST["id"];
 $mok = $_POST["mok"];
 $shu = $_POST["shu"];
 $life = $_POST["life"];
@@ -30,15 +30,15 @@ try {
     exit('DbConnectError:'.$e->getMesseage());
 }
 
-$sql = "INSERT INTO sim(id, mok, shu, life, enj, cho, kekka )
-        VALUES(NULL, :mok, :shu, :life, :enj, :cho, :kekka)";
-$stmt = $pdo->prepare($sql);
+$update = "UPDATE sim SET mok=:mok, shu=:shu, life=:life, enj=:enj, cho=:cho, kekka=:kekka WHERE id=:id";
+$stmt = $pdo->prepare($update);
 $stmt->bindValue(':mok', $mok, PDO::PARAM_STR);
 $stmt->bindValue(':shu', $shu, PDO::PARAM_STR);
 $stmt->bindValue(':life', $life, PDO::PARAM_STR);
 $stmt->bindValue(':enj', $enj, PDO::PARAM_STR);
 $stmt->bindValue(':cho', $cho, PDO::PARAM_STR);
 $stmt->bindValue(':kekka', $kekka, PDO::PARAM_STR);
+$stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $status = $stmt->execute();
 
 if($status==false){
@@ -49,6 +49,3 @@ if($status==false){
 }
 
 ?>
-
-
-
