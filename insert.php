@@ -30,13 +30,14 @@ try {
     exit('DbConnectError:'.$e->getMesseage());
 }
 
-$sql = "INSERT INTO sim(id, mok, shu, life, enj, cho, kekka )
-        VALUES(NULL, :mok, :shu, :life, :enj, :cho, :kekka)";
+$sql = "INSERT INTO sim(id, mok, shu, life, enj, par, cho, kekka )
+        VALUES(NULL, :mok, :shu, :life, :enj, :par, :cho, :kekka)";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':mok', $mok, PDO::PARAM_STR);
 $stmt->bindValue(':shu', $shu, PDO::PARAM_STR);
 $stmt->bindValue(':life', $life, PDO::PARAM_STR);
 $stmt->bindValue(':enj', $enj, PDO::PARAM_STR);
+$stmt->bindValue(':par', $par, PDO::PARAM_STR);
 $stmt->bindValue(':cho', $cho, PDO::PARAM_STR);
 $stmt->bindValue(':kekka', $kekka, PDO::PARAM_STR);
 $status = $stmt->execute();
