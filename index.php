@@ -10,6 +10,8 @@
 
 <body>
 <h1>貯金シミュレーターα</h1>
+
+<p><a href="select.php"　class="link">登録一覧へ</a></p>
     <form action="insert.php" method="post">
         <p>目標金額：<input type="number" name="mok" min="1">万円</p>
         <p>収入：<input type="number" name="shu" min="0">万円</p>
