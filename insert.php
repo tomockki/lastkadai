@@ -17,7 +17,8 @@ if( $cho < 0 ){
     echo "<p>"."毎月".$par."%貯金すると"."</p>";
     echo "<p>"."毎月の貯金額：".$cho."万円"."</p>";
     echo "<p>"."目標金額まで約".ceil($kekka)."ヶ月かかります。"."</p>";
-    echo "<a href = index.php>登録画面へ</a>";
+    echo "<a href = index.php>登録画面へ</a><br>";
+    echo "<a href = select.php>登録一覧</a>";
 }
 
 try {

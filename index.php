@@ -17,5 +17,7 @@
         <p>貯金割合：<input type="number" name="par" min="1" max="100">％</p>
         <p><input type="submit" value="計算"></p>
     </form>
+
+
 </body>
 </html>
