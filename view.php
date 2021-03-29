@@ -34,6 +34,8 @@ if($status==false){
 
 <body>
 <h1>貯金シミュレーターα</h1>
+<p><a href="select.php"　class="link">登録一覧へ</a><br>
+<a href="logout.php"　class="">ログアウト</a></p>
     <form action="update.php" method="post">
         <p>目標金額：<input type="number" name="mok" value="<?=$row["mok"]?>" min="1">万円</p>
         <p>収入：<input type="number" name="shu" value="<?=$row["shu"]?>" min="0">万円</p>

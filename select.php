@@ -38,6 +38,6 @@ if($status==false){
 </head>
 <body>
     <div><?=$view?></div>
-    <p><a href = index.php>登録画面へ</a><br></p>
+    <p><a href = index.php>登録画面へ</a><br><a href= logout.php>ログアウト</a></p>
 </body>
 </html>
