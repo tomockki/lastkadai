@@ -2,11 +2,10 @@
 
 $id = $_GET["id"];
 
-try {
-    $pdo = new PDO('mysql:dbname=chokin;charset=utf8;host=localhost', 'root', 'root');
-} catch (PDOException $e) {
-    exit('DbConnectError:'.$e->getMesseage());
-}
+session_start();
+include("funcs.php");
+loginCheck();
+$pdo = db_connect();
 
 $sql = "DELETE FROM sim WHERE id = :id";
 $stmt = $pdo->prepare($sql);

@@ -9,6 +9,11 @@
 </head>
 
 <body>
+<?php
+session_start();
+include("funcs.php");
+loginCheck();
+?>
 <h1>貯金シミュレーターα</h1>
 
 <p><a href="select.php"　class="link">登録一覧へ</a></p>

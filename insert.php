@@ -1,4 +1,7 @@
 <?php
+session_start();
+include("funcs.php");
+loginCheck();
 
 if(
     !isset($_POST["mok"]) || $_POST["mok"] == "" ||
@@ -36,11 +39,7 @@ if( $cho <= 0 ){
     echo "<a href = select.php>登録一覧</a></p>";
 }
 
-try {
-    $pdo = new PDO('mysql:dbname=chokin;charset=utf8;host=localhost', 'root', 'root');
-} catch (PDOException $e) {
-    exit('DbConnectError:'.$e->getMesseage());
-}
+$pdo = db_connect();
 
 $sql = "INSERT INTO sim(id, mok, shu, life, enj, par, cho, kekka )
         VALUES(NULL, :mok, :shu, :life, :enj, :par, :cho, :kekka)";
