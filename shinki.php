@@ -7,7 +7,7 @@ if(
     !isset($_POST["u_id"]) || $_POST["u_id"] == "" ||
     !isset($_POST["u_pw"]) || $_POST["u_pw"] == ""
 ){
-    echo "<p>"."未入力の箇所があります。"."</p>";
+    echo '<p class="minyu">'."未入力の箇所があります。"."</p>";
     echo "<p><a href = touroku.php>登録画面へ</a></p>";
     exit;
 }

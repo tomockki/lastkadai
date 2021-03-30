@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登録一覧</title>
+</head>
+<body>
+<h1>貯金シミュレーターα登録一覧マイページ</h1>
 <?php
 session_start();
 include("funcs.php");
@@ -28,18 +38,7 @@ if($status==false){
         $view .="</p>";
     }
 }
-
 ?>
-
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登録一覧</title>
-</head>
-<body>
     <div><?=$view?></div>
     <p><a href = index.php>登録画面へ</a><br><a href= logout.php>ログアウト</a></p>
 </body>
