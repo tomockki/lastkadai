@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>計算結果</title>
+</head>
+<body>
 <?php
 session_start();
 include("funcs.php");
@@ -27,14 +37,14 @@ $cho = ($shu - $life - $enj) * $waru;
 if( $cho <= 0 ){
     $cho = 0;
     $kekka = 0;
-    echo "<h1>貯金シミュレーターα</h1>";
+    echo "<h1>貯金シミュレーターα計算結果</h1>";
     echo "<p>貯金額は0円です！</p>";
     echo "<p>そのままだと、一生お金はたまりません！！</p>";
     echo "<p><a href = index.php>登録画面へ</a>"."または"."<a href= logout.php>ログアウト</a></p><br>";
     echo "<a href = select.php>登録一覧</a></p>";
 } else{
     $kekka = $mok / $cho;
-    echo "<h1>貯金シミュレーターα</h1>";
+    echo "<h1>貯金シミュレーターα計算結果</h1>";
     echo "<p>"."毎月".$par."%貯金すると"."</p>";
     echo "<p>"."毎月の貯金額：".$cho."万円"."</p>";
     echo "<p>"."目標金額まで約".ceil($kekka)."ヶ月かかります。"."</p>";
@@ -65,6 +75,5 @@ if($status==false){
 }
 
 ?>
-
-
-
+</body>
+</html>
