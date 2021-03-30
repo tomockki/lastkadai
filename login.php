@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ログイン</title>
 </head>
+<h1>ログイン画面</h1>
+<p><a href="touroku.php">新規登録画面へ</a></p>
 <body>
     <form action="login_act.php" method="post">
     <div>ID:<input type="text" name="lid"></div>

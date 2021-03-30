@@ -26,12 +26,14 @@ $cho = ($shu - $life - $enj) * $waru;
 if( $cho <= 0 ){
     $cho = 0;
     $kekka = 0;
+    echo "<h1>貯金シミュレーター</h1>";
     echo "<p>貯金額は0円です！</p>";
     echo "<p>そのままだと、一生お金はたまりません！！</p>";
     echo "<p><a href = index.php>登録画面へ</a>"."または"."<a href= logout.php>ログアウト</a></p><br>";
     echo "<a href = select.php>登録一覧</a></p>";
 } else{
     $kekka = $mok / $cho;
+    echo "<h1>貯金シミュレーター</h1>";
     echo "<p>"."毎月".$par."%貯金すると"."</p>";
     echo "<p>"."毎月の貯金額：".$cho."万円"."</p>";
     echo "<p>"."目標金額まで約".ceil($kekka)."ヶ月かかります。"."</p>";

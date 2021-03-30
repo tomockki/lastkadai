@@ -4,8 +4,9 @@ function loginCheck(){
     if(
         !isset($_SESSION["chk_ssid"]) ||
         $_SESSION["chk_ssid"] != session_id()){
-            echo "<p>LOGIN ERROR!</p>";
+            echo "<p>ログインしてください</p>";
             echo "<p><a href = login.php>ログイン画面へ</a></p>";
+            echo "<p><a href = touroku.php>新規登録画面へ</a></p>";
             exit();
         }else{
             session_regenerate_id(true);

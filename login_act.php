@@ -3,8 +3,6 @@ session_start();
 $lid = $_POST["lid"];
 $lpw = $_POST["lpw"];
 
-echo $lid."<br>".$lpw;
-
 include("funcs.php");
 $pdo = db_connect();
 
@@ -24,6 +22,7 @@ $val = $stmt->fetch();
 if( $val["id"] != ""){
     $_SESSION["chk_ssid"]  = session_id();
     $_SESSION["u_name"]  = $val['u_name'];
+    $_SESSION["u_id"]  = $val['u_id'];
     header("Location: select.php");
 }else{
     header("Location: login.php");

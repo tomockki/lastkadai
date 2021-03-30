@@ -4,8 +4,11 @@ include("funcs.php");
 loginCheck();
 $pdo = db_connect();
 
-$sql = "SELECT * FROM sim";
+$u_id = $_SESSION["u_id"];
+
+$sql = "SELECT * FROM sim WHERE u_id = :u_id ";
 $stmt = $pdo->prepare($sql);
+$stmt->bindValue(':u_id', $u_id, PDO::PARAM_STR);
 $status = $stmt->execute();
 
 $view = "";
