@@ -13,7 +13,7 @@
     <form action="shinki.php" method="post">
         <p>お名前：<input type="text" name="u_name"></p>
         <p>ID：<input type="text" name="u_id"></p>
-        <p>パスワード：<input type="text" name="u_pw"></p>
+        <p>パスワード：<input type="password" name="u_pw"></p>
         <input type="hidden" name="life_flg" value="0">
         <input type="submit" value="新規登録">
     </form>

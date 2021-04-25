@@ -12,7 +12,7 @@
 <body>
     <form action="login_act.php" method="post">
     <div>ID:<input type="text" name="lid"></div>
-    <div>PW:<input type="text" name="lpw"></div>
+    <div>PW:<input type="password" name="lpw"></div>
     <input type="submit" value="ログイン">
     </form>
 </body>
